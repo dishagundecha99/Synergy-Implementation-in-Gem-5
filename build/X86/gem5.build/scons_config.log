@@ -1,0 +1,519 @@
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for linker -Wl,--as-needed support... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0.cc <-
+  |  |int main(int, char *[]) { return 0; }
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0[33m[1m.cc[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0_a138c212024f63a3322bebb3fb9b5553" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_0_a138c212024f63a3322bebb3fb9b5553(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for compiler -Wno-c99-designator support... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_0.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_0.cc <-
+  |  |// CheckCxxFlag DO NOTHING
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_0_847143c371a56d00946858b200a7eb3c.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_0[33m[1m.cc[34m[1m -> [33m[1m_847143c371a56d00946858b200a7eb3c.o(B[m
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for compiler -Wno-defaulted-function-deleted support... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_1.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_1.cc <-
+  |  |// CheckCxxFlag DO NOTHING
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_1_45a48427ab614912d15112a0437dd4b6.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_1[33m[1m.cc[34m[1m -> [33m[1m_45a48427ab614912d15112a0437dd4b6.o(B[m
+  |
+scons: Configure: (cached) yes
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for compiler -gz support... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_2.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_2.cc <-
+  |  |// CheckCxxFlag DO NOTHING
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_2_9328dea263ad5f645d7e50104bc15f26.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_342d5457cbf4639ef3e0d4fb7b8ef89b_2[33m[1m.cc[34m[1m -> [33m[1m_9328dea263ad5f645d7e50104bc15f26.o(B[m
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for linker -gz support... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1.cc <-
+  |  |int main(int, char *[]) { return 0; }
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1[33m[1m.cc[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1_f18729afe8988371fa0e715ad905c9e2" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_da935ab7a2c376c10f2ce1130ab88c51_1_f18729afe8988371fa0e715ad905c9e2(B[m
+  |
+scons: Configure: (cached) yes
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_00aead3e8ca21910d6e3fa70198d4d05" is up to date.
+scons: Configure: The original builder output was:
+  |
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C header file Python.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_6f79fff2b5fa95157216534d203df494_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_6f79fff2b5fa95157216534d203df494_0.c <-
+  |  |
+  |  |#include <Python.h>
+  |  |
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_6f79fff2b5fa95157216534d203df494_0_8c2d4efd07171fff31d2de142d498db6.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_6f79fff2b5fa95157216534d203df494_0[33m[1m.c[34m[1m -> [33m[1m_8c2d4efd07171fff31d2de142d498db6.o(B[m
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking Python version... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0.cc <-
+  |  |
+  |  |#include <pybind11/embed.h>
+  |  |
+  |  |int
+  |  |main(int argc, char **argv) {
+  |  |    pybind11::scoped_interpreter guard{};
+  |  |    pybind11::exec(
+  |  |        "import sys\n"
+  |  |        "vi = sys.version_info\n"
+  |  |        "sys.stdout.write('%i.%i.%i' % (vi.major, vi.minor, vi.micro));\n");
+  |  |    return 0;
+  |  |}
+  |  |    
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0[33m[1m.cc[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0_a49264de5141b90bec481a9ba55a7d38" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0_a49264de5141b90bec481a9ba55a7d38(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0_a49264de5141b90bec481a9ba55a7d38.out" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0_a49264de5141b90bec481a9ba55a7d38 > build/X86/gem5.build/scons_config/conftest_2176b2d932a60acfa5b4079f6e5ab92b_0_a49264de5141b90bec481a9ba55a7d38.out
+  |
+scons: Configure: (cached) 3.13.2
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for accept(0,0,0) in C++ library None... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0.cpp" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0.cpp <-
+  |  |
+  |  |
+  |  |#include "sys/socket.h"
+  |  |
+  |  |int main(void) {
+  |  |  accept(0,0,0);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0[33m[1m.cpp[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0_2f5da4c5b3bddd2c31b4940b4c35b6b3" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_fa6044680a630c4a205df174495c137c_0_2f5da4c5b3bddd2c31b4940b4c35b6b3(B[m
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for zlibVersion() in C++ library z... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0.cpp" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0.cpp <-
+  |  |
+  |  |
+  |  |#include "zlib.h"
+  |  |
+  |  |int main(void) {
+  |  |  zlibVersion();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0[33m[1m.cpp[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0_c1414e1a0b0e58079dfaf5e89cd94dde" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_dc915a928df035c3500ecc014c4c1694_0_c1414e1a0b0e58079dfaf5e89cd94dde(B[m
+  |
+scons: Configure: (cached) yes
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C library tcmalloc_minimal... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0.c <-
+  |  |
+  |  |
+  |  |
+  |  |int main(void) {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0_4c85a140b59998e30f060e97dca4a07a" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_0_4c85a140b59998e30f060e97dca4a07a(B[m
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking for C library tcmalloc... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1.c <-
+  |  |
+  |  |
+  |  |
+  |  |int main(void) {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1_81159f4b20becc9cad715684c2722627" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_e492448966d6e04631c094ba6d6e8a32_1_81159f4b20becc9cad715684c2722627(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C header file capstone/capstone.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_228713437195dd19f42492507090c16d_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_228713437195dd19f42492507090c16d_0.c <-
+  |  |
+  |  |#include <capstone/capstone.h>
+  |  |
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_228713437195dd19f42492507090c16d_0_4e96110ea8c27784ab586133fc27041f.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_228713437195dd19f42492507090c16d_0[33m[1m.c[34m[1m -> [33m[1m_4e96110ea8c27784ab586133fc27041f.o(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C header file linux/kvm.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_3d4db39b7cb946e659f69394900767da_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_3d4db39b7cb946e659f69394900767da_0.c <-
+  |  |
+  |  |#include <linux/kvm.h>
+  |  |
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_3d4db39b7cb946e659f69394900767da_0_b2c9cec9ec514f32cc79e1b81e463cc8.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_3d4db39b7cb946e659f69394900767da_0[33m[1m.c[34m[1m -> [33m[1m_b2c9cec9ec514f32cc79e1b81e463cc8.o(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C header file linux/if_tun.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_479afe281e6dd1a87a0a74ae5e0195a7_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_479afe281e6dd1a87a0a74ae5e0195a7_0.c <-
+  |  |
+  |  |#include <linux/if_tun.h>
+  |  |
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_479afe281e6dd1a87a0a74ae5e0195a7_0_dc2a829c7dee700174c443fb52d804f4.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_479afe281e6dd1a87a0a74ae5e0195a7_0[33m[1m.c[34m[1m -> [33m[1m_dc2a829c7dee700174c443fb52d804f4.o(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for backtrace_symbols_fd((void *)1, 0, 0) in C library None... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0.c <-
+  |  |
+  |  |
+  |  |#include "execinfo.h"
+  |  |
+  |  |int main(void) {
+  |  |  backtrace_symbols_fd((void *)1, 0, 0);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0_d4c2da57db3c72af5c66f2af031a83c9" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_45b7ea2111de8d730f6af4800b419fef_0_d4c2da57db3c72af5c66f2af031a83c9(B[m
+  |
+scons: Configure: (cached) yes
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for C header file fenv.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_b63620e7908057d9c68909c7dea2f0c0_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_b63620e7908057d9c68909c7dea2f0c0_0.c <-
+  |  |
+  |  |#include <fenv.h>
+  |  |
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_b63620e7908057d9c68909c7dea2f0c0_0_ca10d13725a58fa11c0df110dad86ceb.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_b63620e7908057d9c68909c7dea2f0c0_0[33m[1m.c[34m[1m -> [33m[1m_ca10d13725a58fa11c0df110dad86ceb.o(B[m
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for C header file png.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_6a115e90d1ef31132299ba5de9361ca4_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_6a115e90d1ef31132299ba5de9361ca4_0.c <-
+  |  |
+  |  |#include <png.h>
+  |  |
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_6a115e90d1ef31132299ba5de9361ca4_0_b9438fbe8c41a6bc49d3d84eb3f062d2.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_6a115e90d1ef31132299ba5de9361ca4_0[33m[1m.c[34m[1m -> [33m[1m_b9438fbe8c41a6bc49d3d84eb3f062d2.o(B[m
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking for clock_nanosleep(0,0,NULL,NULL) in C library None... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_0.c <-
+  |  |
+  |  |
+  |  |#include "time.h"
+  |  |
+  |  |int main(void) {
+  |  |  clock_nanosleep(0,0,NULL,NULL);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_0.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_0[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking for clock_nanosleep(0,0,NULL,NULL) in C library rt... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_1.c <-
+  |  |
+  |  |
+  |  |#include "time.h"
+  |  |
+  |  |int main(void) {
+  |  |  clock_nanosleep(0,0,NULL,NULL);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_1.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_3d9727f0784ca6f48b402eb829b556f2_1[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking for C header file valgrind/valgrind.h... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_fc44fbdd5cf1cbd0f4445fc96a17746b_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_fc44fbdd5cf1cbd0f4445fc96a17746b_0.c <-
+  |  |
+  |  |#include "valgrind/valgrind.h"
+  |  |
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_fc44fbdd5cf1cbd0f4445fc96a17746b_0_21c53684b7453e7874bb757369ed6031.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_fc44fbdd5cf1cbd0f4445fc96a17746b_0[33m[1m.c[34m[1m -> [33m[1m_21c53684b7453e7874bb757369ed6031.o(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_5a5d5db21b8c0c10baa6ac0764f01dca_0.cc" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_5a5d5db21b8c0c10baa6ac0764f01dca_0.cc <-
+  |  |
+  |  |            int main() {return 0;}
+  |  |            namespace [[gnu::deprecated("Test namespace deprecation")]]
+  |  |            test_deprecated_namespace {}
+  |  |        
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_5a5d5db21b8c0c10baa6ac0764f01dca_0_7698390cf542132d5835a5b14be70b0a.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [     CXX] [33mX86/gem5.build/scons_config/conftest_5a5d5db21b8c0c10baa6ac0764f01dca_0[33m[1m.cc[34m[1m -> [33m[1m_7698390cf542132d5835a5b14be70b0a.o(B[m
+  |
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for H5Fcreate("", 0, 0, 0) in C library hdf5... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_405a27e3c1c4653876e1e3238e8ed875_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_405a27e3c1c4653876e1e3238e8ed875_0.c <-
+  |  |
+  |  |
+  |  |#include "hdf5.h"
+  |  |
+  |  |int main(void) {
+  |  |  H5Fcreate("", 0, 0, 0);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_405a27e3c1c4653876e1e3238e8ed875_0.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_405a27e3c1c4653876e1e3238e8ed875_0[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: (cached) no
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking for shm_open("/test", 0, 0) in C library None... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0.c <-
+  |  |
+  |  |
+  |  |#include "sys/mman.h"
+  |  |
+  |  |int main(void) {
+  |  |  shm_open("/test", 0, 0);
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0[33m[1m.c[34m[1m -> [33m[1m.o(B[m
+  |
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0_cbf9d1b3aed9078d4d75a63f04c033ca" is up to date.
+scons: Configure: The original builder output was:
+  |(B[m [    LINK] [33m[33m[1m[34m[1m -> [33m[1mX86/gem5.build/scons_config/conftest_b4e440fe1099a7d4a124ee9f6c6af6d9_0_cbf9d1b3aed9078d4d75a63f04c033ca(B[m
+  |
+scons: Configure: (cached) yes
+
+
+file /Users/dishagundecha/Desktop/SecureMemoryTutorial/site_scons/gem5_scons/configure.py,line 171:
+	Configure(confdir = build/X86/gem5.build/scons_config)
+scons: Configure: Checking whether __i386__ is declared... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_35422207c1ff9f87810e3f3cf05741b3_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_35422207c1ff9f87810e3f3cf05741b3_0.c <-
+  |  |
+  |  |int main(void)
+  |  |{
+  |  |#ifndef __i386__
+  |  |    (void) __i386__;
+  |  |#endif
+  |  |    ;
+  |  |    return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_35422207c1ff9f87810e3f3cf05741b3_0_4ec13e8c2ffd31b8064f22e121b5a0c7.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_35422207c1ff9f87810e3f3cf05741b3_0[33m[1m.c[34m[1m -> [33m[1m_4ec13e8c2ffd31b8064f22e121b5a0c7.o(B[m
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking whether __x86_64__ is declared... 
+scons: Configure: "build/X86/gem5.build/scons_config/conftest_fc5c667aeab98cc869c22ec2d558eb9d_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |build/X86/gem5.build/scons_config/conftest_fc5c667aeab98cc869c22ec2d558eb9d_0.c <-
+  |  |
+  |  |int main(void)
+  |  |{
+  |  |#ifndef __x86_64__
+  |  |    (void) __x86_64__;
+  |  |#endif
+  |  |    ;
+  |  |    return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building "build/X86/gem5.build/scons_config/conftest_fc5c667aeab98cc869c22ec2d558eb9d_0_ee56813ac080bf2140e1b9d8d871ea6c.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |(B[m [      CC] [33mX86/gem5.build/scons_config/conftest_fc5c667aeab98cc869c22ec2d558eb9d_0[33m[1m.c[34m[1m -> [33m[1m_ee56813ac080bf2140e1b9d8d871ea6c.o(B[m
+  |
+scons: Configure: (cached) no
+
+
