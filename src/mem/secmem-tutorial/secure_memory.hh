@@ -8,12 +8,13 @@
 
 #include <set>
 #include <deque>
+#include <list>
 
 #define ARITY 8
-#define BLOCK_SIZE 64
+#define BLOCK_SIZE 72
 #define HMAC_SIZE 8
-#define PAGE_SIZE 4096
 #define DATA_SIZE (BLOCK_SIZE - HMAC_SIZE)
+#define PAGE_SIZE 4096
 
 namespace gem5::memory {
 
@@ -68,13 +69,16 @@ class SecureMemory : public SimObject
     uint64_t getParentAddr(uint64_t child_addr);
     void verifyChildren(PacketPtr parent);
 
+    // The MAC is computed over the first 64 bytes of the block.
     uint64_t computeMAC(const uint8_t* data, size_t len);
     bool validateMAC(const uint8_t* data_with_mac);
 
+    // New parity function that checks the integrity across all 9 chips. We assume the block is arranged in 9 consecutive 8-byte chunks So, For each of the 8 columns, the XOR of the 9 bytes must be zero.
+    bool validateParity(const uint8_t* block);
 
   public:
     SecureMemory(const SecureMemoryParams *p);
-    Port &getPort(const std::string &if_name, PortID idx=InvalidPortID) override;
+    Port &getPort(const std::string &if_name, PortID idx = InvalidPortID) override;
     void startup() override;
 
     struct SecureMemoryStats : public statistics::Group {
