@@ -1,25 +1,20 @@
-// secure_memory.cc (SYNERGY-style modification)
-
 #include "mem/secmem-tutorial/secure_memory.hh"
 #include <cstdint>
 #include <cstring>
+#include <iostream>
 
 gem5::memory::SecureMemory::CpuSidePort::CpuSidePort(const std::string &name, SecureMemory *parent)
     : ResponsePort(name), parent(parent), blocked(false), need_retry(false) {}
 
-    gem5::memory::SecureMemory::MemSidePort::MemSidePort(const std::string &name, SecureMemory *parent)
+gem5::memory::SecureMemory::MemSidePort::MemSidePort(const std::string &name, SecureMemory *parent)
     : RequestPort(name), parent(parent) {}
 
 namespace gem5::memory {
 
-
-
-
-// Hash-like MAC computation function
 uint64_t SecureMemory::computeMAC(const uint8_t* data, size_t len) {
     uint64_t mac = 0;
     for (size_t i = 0; i < len; ++i) {
-        mac = (mac * 131) + data[i];  // simple hash
+        mac = (mac * 131) + data[i];
     }
     return mac;
 }
@@ -31,7 +26,6 @@ bool SecureMemory::validateMAC(const uint8_t* data_with_mac) {
     return received_mac == computed_mac;
 }
 
-
 SecureMemory::SecureMemory(const SecureMemoryParams *p)
     : SimObject(*p),
       cpu_port(p->name + ".cpu_side", this),
@@ -39,8 +33,10 @@ SecureMemory::SecureMemory(const SecureMemoryParams *p)
       stats(*this) {}
 
 Port& SecureMemory::getPort(const std::string &if_name, PortID idx) {
-    if (if_name == "mem_side") return mem_port;
-    else if (if_name == "cpu_side") return cpu_port;
+    if (if_name == "mem_side")
+        return mem_port;
+    else if (if_name == "cpu_side")
+        return cpu_port;
     return SimObject::getPort(if_name, idx);
 }
 
@@ -72,10 +68,17 @@ void SecureMemory::startup() {
 
 bool SecureMemory::handleRequest(PacketPtr pkt) {
     if (pkt->isWrite() && pkt->hasData()) {
-        uint8_t* full_block = pkt->getPtr<uint8_t>();
-        uint8_t* data = full_block;
-        uint64_t new_mac = computeMAC(data, DATA_SIZE);
-        memcpy(full_block + DATA_SIZE, &new_mac, sizeof(uint64_t));
+        if (pkt->getSize() == BLOCK_SIZE) {
+            uint8_t* full_block = pkt->getPtr<uint8_t>();
+            uint64_t new_mac = computeMAC(full_block, DATA_SIZE);
+            memcpy(full_block + DATA_SIZE, &new_mac, sizeof(uint64_t));
+            std::cout << "[DEBUG] Write at 0x" << std::hex << pkt->getAddr()
+                      << " computed MAC: 0x" << new_mac << std::endl;
+        } else {
+            std::cout << "[WARNING] Write packet at addr 0x" << std::hex << pkt->getAddr() 
+                      << " has size " << std::dec << pkt->getSize() 
+                      << " bytes (expected " << BLOCK_SIZE << " bytes)." << std::endl;
+        }
     }
     mem_port.sendPacket(pkt);
     return true;
@@ -84,14 +87,18 @@ bool SecureMemory::handleRequest(PacketPtr pkt) {
 bool SecureMemory::handleResponse(PacketPtr pkt) {
     if (pkt->isRead() && pkt->getAddr() < integrity_levels[hmac_level]) {
         uint8_t* full_block = pkt->getPtr<uint8_t>();
-        
-        if (!validateMAC(full_block)) {
-            panic("MAC validation failed! Addr: 0x%lx\n", pkt->getAddr());
+        uint64_t stored_mac;
+        memcpy(&stored_mac, full_block + DATA_SIZE, sizeof(uint64_t));
+        uint64_t computed_mac = computeMAC(full_block, DATA_SIZE);
+        if (stored_mac != computed_mac) {
+            std::cout << "[ERROR] MAC validation failed at address 0x" << std::hex 
+                      << pkt->getAddr() << ". Stored MAC: 0x" << stored_mac 
+                      << ", Computed MAC: 0x" << computed_mac << std::endl;
+            return false;
         }
     }
-    std::cout << "[DEBUG] MAC verified successfully at 0x" << std::hex << pkt->getAddr() << std::endl;
-
-
+    std::cout << "[DEBUG] MAC verified successfully at 0x" << std::hex 
+              << pkt->getAddr() << std::endl;
     cpu_port.sendPacket(pkt);
     return true;
 }
@@ -99,26 +106,17 @@ bool SecureMemory::handleResponse(PacketPtr pkt) {
 Tick SecureMemory::CpuSidePort::recvAtomic(PacketPtr pkt) {
     return parent->mem_port.sendAtomic(pkt);
 }
+
 void SecureMemory::CpuSidePort::recvFunctional(PacketPtr pkt) {
     parent->mem_port.sendFunctional(pkt);
 }
+
 void SecureMemory::CpuSidePort::recvRespRetry() {
-    // Not used in this simple implementation
 }
 
 AddrRangeList SecureMemory::CpuSidePort::getAddrRanges() const {
     return parent->mem_port.getAddrRanges();
 }
-
-bool SecureMemory::MemSidePort::isSnooping() const {
-    return false;
-}
-
-void SecureMemory::MemSidePort::recvRangeChange() {
-    parent->cpu_port.sendRangeChange();
-}
-
-
 
 bool SecureMemory::CpuSidePort::recvTimingReq(PacketPtr pkt) {
     if (blocked || !parent->handleRequest(pkt)) {
@@ -133,12 +131,21 @@ void SecureMemory::CpuSidePort::sendPacket(PacketPtr pkt) {
     PacketPtr to_send = blocked_packets.front();
     if (sendTimingResp(to_send)) {
         blocked_packets.pop_front();
-        if (blocked) blocked = false;
+        if (blocked)
+            blocked = false;
         if (need_retry) {
             sendRetryReq();
             need_retry = false;
         }
     }
+}
+
+bool SecureMemory::MemSidePort::isSnooping() const {
+    return false;
+}
+
+void SecureMemory::MemSidePort::recvRangeChange() {
+    parent->cpu_port.sendRangeChange();
 }
 
 bool SecureMemory::MemSidePort::recvTimingResp(PacketPtr pkt) {
@@ -153,9 +160,8 @@ void SecureMemory::MemSidePort::recvReqRetry() {
 }
 
 void SecureMemory::MemSidePort::sendPacket(PacketPtr pkt) {
-    if (!sendTimingReq(pkt)) {
+    if (!sendTimingReq(pkt))
         blocked_packets.push_back(pkt);
-    }
 }
 
 SecureMemory::SecureMemoryStats::SecureMemoryStats(SecureMemory &m)
@@ -169,7 +175,7 @@ void SecureMemory::SecureMemoryStats::regStats() {
     statistics::Group::regStats();
 }
 
-}; // namespace gem5::memory
+}; 
 
 gem5::memory::SecureMemory *
 gem5::SecureMemoryParams::create() const {
