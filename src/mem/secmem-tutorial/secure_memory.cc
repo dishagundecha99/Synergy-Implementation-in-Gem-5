@@ -1,3 +1,4 @@
+//parity validation added
 #include "mem/secmem-tutorial/secure_memory.hh"
 #include <cstdint>
 #include <cstring>
