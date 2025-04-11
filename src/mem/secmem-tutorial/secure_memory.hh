@@ -1,3 +1,5 @@
+
+//parity validation added
 #ifndef __MEM_SECURE_MEMORY__
 #define __MEM_SECURE_MEMORY__
 
