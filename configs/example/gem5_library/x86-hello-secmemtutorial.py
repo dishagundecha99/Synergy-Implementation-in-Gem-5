@@ -86,7 +86,7 @@ board.set_se_binary_workload(
     # Any resource specified in this file will be automatically retrieved.
     # At the time of writing, this file is a WIP and does not contain all
     # resources. Jira ticket: https://gem5.atlassian.net/browse/GEM5-1096
-    obtain_resource("x86-hello64-static")
+    obtain_resource("x86-gapbs-tc")
 )
 
 # Lastly we run the simulation.
