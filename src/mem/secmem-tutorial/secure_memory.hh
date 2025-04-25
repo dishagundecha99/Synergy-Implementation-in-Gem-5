@@ -1,93 +1,95 @@
-#ifndef __MEM_SECURE_MEMORY__
-#define __MEM_SECURE_MEMORY__
+#ifndef __SECURE_MEMORY_HH__
+#define __SECURE_MEMORY_HH__
 
-#include "base/statistics.hh"
 #include "mem/port.hh"
 #include "params/SecureMemory.hh"
 #include "sim/sim_object.hh"
+#include "base/statistics.hh"
 
-#include <set>
 #include <deque>
-
-#define ARITY 8
-#define BLOCK_SIZE 64
-#define HMAC_SIZE 8
-#define PAGE_SIZE 4096
-#define DATA_SIZE (BLOCK_SIZE - HMAC_SIZE)
+#include <unordered_map>
+#include <vector>
+#include <cstdint>
+#include <string>
+#include <iostream>
 
 namespace gem5::memory {
 
-class SecureMemory : public SimObject
-{
-  private:
+class SecureMemory : public SimObject {
+  public:
     class CpuSidePort : public ResponsePort {
       private:
         SecureMemory *parent;
         bool blocked;
         bool need_retry;
-        std::list<PacketPtr> blocked_packets;
+        std::deque<PacketPtr> blocked_packets;
       public:
         CpuSidePort(const std::string &name, SecureMemory *parent);
-        Tick recvAtomic(PacketPtr pkt) override;
+        AddrRangeList getAddrRanges() const override;
         void recvFunctional(PacketPtr pkt) override;
+        Tick recvAtomic(PacketPtr pkt) override;
+        void sendPacket(PacketPtr pkt);
         bool recvTimingReq(PacketPtr pkt) override;
         void recvRespRetry() override;
-        AddrRangeList getAddrRanges() const override;
-        void sendPacket(PacketPtr pkt);
     };
 
     class MemSidePort : public RequestPort {
       private:
         SecureMemory *parent;
-        std::list<PacketPtr> blocked_packets;
+        std::deque<PacketPtr> blocked_packets;
       public:
         MemSidePort(const std::string &name, SecureMemory *parent);
         bool isSnooping() const override;
+        void recvRangeChange() override;
         bool recvTimingResp(PacketPtr pkt) override;
         void recvReqRetry() override;
-        void recvRangeChange() override;
         void sendPacket(PacketPtr pkt);
     };
 
+    SecureMemory(const SecureMemoryParams *p);
+    Port &getPort(const std::string &if_name, PortID idx = InvalidPortID) override;
+    void startup() override;
+
+  private:
     CpuSidePort cpu_port;
     MemSidePort mem_port;
 
-    std::deque<uint64_t> integrity_levels;
-    int root_level = 1;
-    int hmac_level = 0;
-    int data_level;
-    int counter_level;
+    // fixed sizes
+    static constexpr size_t BLOCK_SIZE = 72; // 64B data + 8B MAC
+    static constexpr size_t DATA_SIZE = 64;
+    static constexpr size_t HMAC_SIZE = 8;
+    static constexpr int ARITY = 2;
 
-    std::set<uint64_t> pending_tree_authentication;
-    std::set<uint64_t> pending_hmac;
-    std::set<PacketPtr> pending_untrusted_packets;
+    uint64_t start_addr;
+    std::vector<std::vector<uint64_t>> merkle_levels;
+
+    // shadow storage and write counts
+    std::unordered_map<uint64_t, std::vector<uint8_t>> block_data;
+    std::unordered_map<uint64_t, size_t> write_count;
+
+    uint64_t computeMAC(const uint8_t* data, size_t len);
+    bool validateMAC(const std::vector<uint8_t> &block);
+    bool validateParity(const std::vector<uint8_t> &block);
+    uint64_t combineHashes(uint64_t left, uint64_t right);
+
+    void updateMerkleTree(uint64_t block_addr, uint64_t block_mac);
+    void verifyMerklePath(uint64_t block_addr);
 
     bool handleRequest(PacketPtr pkt);
     bool handleResponse(PacketPtr pkt);
-    uint64_t getHmacAddr(uint64_t child_addr);
-    uint64_t getParentAddr(uint64_t child_addr);
-    void verifyChildren(PacketPtr parent);
 
-    uint64_t computeMAC(const uint8_t* data, size_t len);
-    bool validateMAC(const uint8_t* data_with_mac);
-
-
-  public:
-    SecureMemory(const SecureMemoryParams *p);
-    Port &getPort(const std::string &if_name, PortID idx=InvalidPortID) override;
-    void startup() override;
-
-    struct SecureMemoryStats : public statistics::Group {
+    class SecureMemoryStats : public statistics::Group {
+      public:
         SecureMemoryStats(SecureMemory &m);
         void regStats() override;
-        const SecureMemory &m;
+
         statistics::Scalar requests_processed;
         statistics::Scalar responses_processed;
-    };
-
-    SecureMemoryStats stats;
+      private:
+        SecureMemory &m;
+    } stats;
 };
 
-}; // namespace gem5::memory
+} // namespace gem5::memory
 
-#endif // __MEM_SECURE_MEMORY__
+#endif // __SECURE_MEMORY_HH__
